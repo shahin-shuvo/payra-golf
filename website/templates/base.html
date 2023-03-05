@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title%} Payra Golf Club {% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='lib/animate/animate.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static',filename='lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='lib/twentytwenty/twentytwenty.css') }}">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Data Table -->
+   
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <!-- <div class="d-inline-flex align-items-center">
+                    <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed </small>
+                </div> -->
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                    <div class="me-3 pe-3 border-end py-2">
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>7infdiv@gmail.com</p>
+                    </div>
+                    <div class="py-2">
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>01769-072138</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div style="  border-bottom: 5px solid darkgoldenrod;">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-sm-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="m-0 text-dark"><i class="fa fa-golf-ball me-2"></i>Payra Golf Club</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-3" style="padding-left: 40px;" id="nav-div">
+                    <a href="/" class="nav-item nav-link">HOME</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ABOUT</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/aboutpgc" class="dropdown-item">About PGC</a>
+                            <a href="#" class="dropdown-item">Chief Patron</a>
+                            <a href="#" class="dropdown-item">President</a>
+                            <a href="#" class="dropdown-item">Golf Captain</a>
+                            <a href="#" class="dropdown-item">Member</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">MANAGEMENT</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/exec_committee" class="dropdown-item">Management Committee</a>
+                            <a href="/exec_committee" class="dropdown-item">Executive Committee</a>
+                            <a href="/exec_committee" class="dropdown-item">Tournament Committee</a>
+                            <a href="/exec_committee" class="dropdown-item">Handicap Committee</a>
+                            <a href="/exec_committee" class="dropdown-item">Development Committee</a>
+                            <a href="/exec_committee" class="dropdown-item">Rules &amp; Decipline Committee</a>
+                            <a href="/exec_committee" class="dropdown-item">Welfare &amp; Cultural Committee</a>
+                            <a href="/exec_committee" class="dropdown-item">Protocol &amp; Entertainment Committee</a>
+                            <a href="/exec_committee" class="dropdown-item">Balloting Committee</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">TOURNAMENT</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="#" class="dropdown-item">Tournament Schedule</a>
+                            <a href="#" class="dropdown-item">Tournament Result</a>
+                            <a href="#" class="dropdown-item">List of Winner</a>
+                            <a href="#" class="dropdown-item">Flight Schedule</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">FACILITY</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="#" class="dropdown-item">Guest Room</a>
+                            <a href="#" class="dropdown-item">Golf Garden</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-item nav-link">MEMBERSHIP</a>
+                    <a href="/gallery" class="nav-item nav-link">GALLERY</a>
+                    <a href="/contact" class="nav-item nav-link">CONTACT US</a>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+
+
+    <!-- Navbar End -->
+    <div class="page-content">
+        {% block content%}
+
+        {% endblock %}
+    </div>
+
+
+
+    <!-- Footer Start -->
+
+
+
+    <div class="container-fluid bg-dark text-light py-4 " data-wow-delay="0.3s">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Quick Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="club-link mb-2" href="/aboutpgc"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>About
+                            Us</a>
+                        <a class="club-link mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our
+                            Services</a>
+                        <a class="club-link mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest
+                            Blog</a>
+                        <a class="club-link" href="/contact"><i class="bi bi-arrow-right text-primary me-2"></i>Contact
+                            Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Golf Club Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+
+                        <a class="club-link" href="http://182.160.104.235/" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Army Golf Club</a>
+
+                        <a class="club-link" href="http://bhatiarygolfclubbd.com/default.aspx" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Bhatiary Golf &amp;
+                            Country Club</a>
+
+                        <a class="club-link" class="text-light" href="http://bgf-bd.org/UserControls/test"
+                            target="_blank"><i class="bi bi-arrow-right text-primary me-2"></i>Bogra golf Club</a>
+
+                        <a class="club-link" href="https://www.facebook.com/KurmitolaGolfClubKGC/" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Chengi Golf & Country Club</a>
+
+                        <a class="club-link" href="https://www.facebook.com/KurmitolaGolfClubKGC/" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Khagrachhari</a>
+
+                        <a class="club-link" href="http://www.ggc.com.bd/" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Ghatail Golf Club</a>
+
+                        <a class="club-link" href="http://bgf-bd.org/UserControls/test" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Jessore Golf Club</a>
+
+                        <a class="club-link" href="http://kgc-bd.com/" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Kurmitola Golf Club</a>
+
+                        <a class="club-link" href="http://bgf-bd.org/UserControls/test" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Mainamati Golf Club</a>
+
+                        <a class="club-link" href="http://bgf-bd.org/UserControls/test" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Ordnance Factory Golf
+                            Club</a>
+
+                        <a class="club-link" href="https://rgc66div.wixsite.com/rangpurgolf" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Rangpur Golf Club</a>
+
+                        <a class="club-link" href="http://shaheengolf-bd.com/home.php" target="_blank"><i
+                                class="bi bi-arrow-right text-primary me-2"></i>Shaheen Golf Club</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Get In Touch</h3>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Sheikh Hasina Cantonment, Barishal
+                    </p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>01769-072138</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Follow Us</h3>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i
+                                class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i
+                                class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i
+                                class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i
+                                class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-light py-4" style="background: #051225;">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">12 Sig Bn</a>. All Rights
+                        Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-white border-bottom" href="">Capt Shahin</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static',filename='lib/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/tempusdominus/js/moment.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/twentytwenty/jquery.event.move.js') }}"></script>
+    <script src="{{ url_for('static',filename='lib/twentytwenty/jquery.twentytwenty.js') }}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+   
+</body>
+
+</html>
