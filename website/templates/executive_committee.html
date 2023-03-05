@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title%}
+Payra Golf Club
+{% endblock %}
+
+
+
+{% block content%}
+
+
+
+    <!-- Team Start -->
+    <div class="container py-5" style="margin: auto; width: 90vw;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-sm-12 col-md-4 col-lg-3 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="section-title bg-light rounded h-100 p-5">
+                        <h5 class="position-relative d-inline-block text-primary text-uppercase" style="font-size: small;">Our Committee</h5>
+                        <h1 class="display-6 mb-4" style="font-size: xx-large;">Meet Our Executive Committee</h1>
+                    </div>
+                </div>
+
+                {% for  item in myList %}
+                {% set photolink = item["photo"] %}
+            
+                <div class="col-sm-12 col-md-4 col-lg-3 wow slideInUp" data-wow-delay="0.1s" >
+                    <div class="card">
+                        <img src="{{photolink}}" class="card-img-top" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">{{item["appt"]}}</h5>
+                          <p class="card-text h6">{{item["name"]}}</p>
+                          <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                          <a class="btn btn-warning btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                          <a class="btn btn-danger btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                        </div>
+                      </div>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+{% endblock %}
