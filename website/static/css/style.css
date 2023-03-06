@@ -19,7 +19,7 @@ html,body
 
 .navbar-brand .text-dark{
     font-family: 'Rubik Dirt', cursive;
-    font-size: xx-large;
+    font-size: larger;
 }
 .btn {
     font-family: 'Jost', sans-serif;
@@ -291,8 +291,8 @@ html,body
     box-shadow: 0 0 5px 5px olive;
    }
    .card-circle .card-title {
-    font-weight: 300;
-    font-size: medium;
+    font-weight: 200;
+    font-size: small;
   }
    .card-circle .card-text{
       font-weight:400;

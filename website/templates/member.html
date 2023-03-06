@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title%}
+Payra Golf Club
+{% endblock %}
+
+
+
+{% block content%}
+<div class="container one card-elm" style="margin: auto; width: 80vw;">
+    <h1 style="margin-top: 20px;">MEMBER OF PGC</h1>
+    <table class="table table-bordered cell-border table-sm" id="datatable">
+        <thead>
+            <tr style="background-color: #091E3E; color: whitesmoke;">
+
+                <th>Ser</th>
+                <th>Rk</th>
+                <th>Name</th>
+                <th>Appt</th>
+                <th>Unit/HQ</th>
+
+            </tr>
+        </thead>
+        <tbody style="color: black;">
+            {% for x in memberList %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ x["Rk"] }}</td>
+                <td>{{ x["Name"] }}</td>
+                <td>{{ x["Appt"] }}</td>
+                <td>{{ x["Unit/HQ"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div style="height: 20px; margin-bottom: 20px;">
+    </div>
+</div>
+
+{% endblock %}

@@ -22,14 +22,20 @@ Payra Golf Club
                 </div>
 
                 {% for  item in myList %}
-                {% set photolink = item["photo"] %}
-            
+                
+                {% set photolink = item["Photo"] %}
+               
                 <div class="col-sm-12 col-md-4 col-lg-3 wow slideInUp" data-wow-delay="0.1s" >
                     <div class="card">
+                        {% if photolink is not string %}
+                        
+                        <img src="{{url_for('static',filename='img/error-person.png')}}" class="card-img-top" alt="">
+                        {% else %}
                         <img src="{{photolink}}" class="card-img-top" alt="">
+                        {% endif %}
                         <div class="card-body">
-                          <h5 class="card-title">{{item["appt"]}}</h5>
-                          <p class="card-text h6">{{item["name"]}}</p>
+                          <h5 class="card-title">{{item["Appt"]}}</h5>
+                          <p class="card-text h6">{{item["Name"]}}</p>
                           <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
                           <a class="btn btn-warning btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
                           <a class="btn btn-danger btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>

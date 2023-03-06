@@ -40,7 +40,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
     <!-- Data Table -->
-   
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
 
 </head>
 
@@ -89,7 +90,7 @@
     <div style="  border-bottom: 5px solid darkgoldenrod;">
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-sm-0">
             <a href="" class="navbar-brand p-0">
-                <h1 class="m-0 text-dark"><i class="fa fa-golf-ball me-2"></i>Payra Golf Club</h1>
+                <h1 class="m-0 text-dark"><i style="color: green;" class="fa fa-golf-ball me-2"></i>Payra Golf & Country Club</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -97,17 +98,8 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-3" style="padding-left: 40px;" id="nav-div">
                     <a href="/" class="nav-item nav-link">HOME</a>
-
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ABOUT</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="/aboutpgc" class="dropdown-item">About PGC</a>
-                            <a href="#" class="dropdown-item">Chief Patron</a>
-                            <a href="#" class="dropdown-item">President</a>
-                            <a href="#" class="dropdown-item">Golf Captain</a>
-                            <a href="#" class="dropdown-item">Member</a>
-                        </div>
-                    </div>
+                    <a href="/aboutpgcc" class="nav-item nav-link">ABOUT US</a>
+                    
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">MANAGEMENT</a>
                         <div class="dropdown-menu m-0">
@@ -116,20 +108,20 @@
                             <a href="/exec_committee" class="dropdown-item">Tournament Committee</a>
                             <a href="/exec_committee" class="dropdown-item">Handicap Committee</a>
                             <a href="/exec_committee" class="dropdown-item">Development Committee</a>
-                            <a href="/exec_committee" class="dropdown-item">Rules &amp; Decipline Committee</a>
+                            <!-- <a href="/exec_committee" class="dropdown-item">Rules &amp; Decipline Committee</a>
                             <a href="/exec_committee" class="dropdown-item">Welfare &amp; Cultural Committee</a>
                             <a href="/exec_committee" class="dropdown-item">Protocol &amp; Entertainment Committee</a>
-                            <a href="/exec_committee" class="dropdown-item">Balloting Committee</a>
+                            <a href="/exec_committee" class="dropdown-item">Balloting Committee</a> -->
                         </div>
                     </div>
 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">TOURNAMENT</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item">Tournament Schedule</a>
-                            <a href="#" class="dropdown-item">Tournament Result</a>
-                            <a href="#" class="dropdown-item">List of Winner</a>
-                            <a href="#" class="dropdown-item">Flight Schedule</a>
+                            <a href="/tournament-summary" class="dropdown-item">Tournament Summary</a>
+                            <a href="/tournament-summary" class="dropdown-item">Tournament Result</a>
+                            <a href="/tournament-summary" class="dropdown-item">List of Winner</a>
+                            <!-- <a href="#" class="dropdown-item">Flight Schedule</a> -->
                         </div>
                     </div>
 
@@ -140,7 +132,7 @@
                             <a href="#" class="dropdown-item">Golf Garden</a>
                         </div>
                     </div>
-                    <a href="#" class="nav-item nav-link">MEMBERSHIP</a>
+                    <a href="/member" class="nav-item nav-link">MEMBERSHIP</a>
                     <a href="/gallery" class="nav-item nav-link">GALLERY</a>
                     <a href="/contact" class="nav-item nav-link">CONTACT US</a>
                 </div>
@@ -244,6 +236,12 @@
                         <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i
                                 class="fab fa-instagram fw-normal"></i></a>
                     </div>
+                    <div class="col-xl-4 col-lg-12 " style="margin-top: 5px;">
+                        <iframe class="position-relative rounded w-30 h-20"
+                            src="https://maps.google.com/maps?q=Payra Golf Course&t=k&z=16&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" style="min-height: 230px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,7 +280,27 @@
 
     <!-- Template Javascript -->
     <script src="{{ url_for('static',filename='js/main.js') }}"></script>
-   
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#datatable').DataTable();
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
 </body>
 
 </html>

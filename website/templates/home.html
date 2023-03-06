@@ -122,15 +122,20 @@ Payra Golf Club
 
     <div class="container row" style="margin: auto">
         {% for x in myList %}
-        {% set photolink = x["photo"] %}
+        {% set photolink = x["Photo"] %}
         <div class="ol-sm-12 col-md-4 col-lg-3">
             <div class="card-circle">
                 <div class="card-icon">
+                    {% if photolink is not string %}
+                        
+                    <img src="{{url_for('static',filename='img/error-person.png')}}" class="card-img-top" alt="">
+                    {% else %}
                     <img src="{{photolink}}" class="card-img-top" alt="">
+                    {% endif %}
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{ x["appt"] }}</h5>
-                    <p class="card-text">{{ x["name"] }}</p>
+                    <h6 class="card-title" style="font-size: larger;">{{ x["Appt"] }}</h6>
+                    <p class="card-text">{{ x["Name"] }}</p>
                     <a class="icon-a" href="#"><i class="fab fa-facebook"></i></a>
                     <a class="icon-a" href="#"><i class="fab fa-instagram" style="color: #E1306C;"></i></a>
                     <a class="icon-a" href="#"><i class="fab fa-twitter" style="color: #8E44AD;"></i></a>
