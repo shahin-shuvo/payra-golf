@@ -14,33 +14,33 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
+<!-- Libraries Stylesheet -->
 
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='lib/animate/animate.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ url_for('static',filename='lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='lib/twentytwenty/twentytwenty.css') }}">
-
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='lib/animate/animate.min.css') }}">
+<link rel="stylesheet" type="text/css"
+    href="{{ url_for('static',filename='lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='lib/twentytwenty/twentytwenty.css') }}">
 
 
-    <!-- Template Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
 
-    <!-- Data Table -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+<!-- Template Stylesheet -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<!-- Data Table -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
 
 
 </head>
@@ -90,7 +90,8 @@
     <div style="  border-bottom: 5px solid darkgoldenrod;">
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-sm-0">
             <a href="" class="navbar-brand p-0">
-                <h1 class="m-0 text-dark"><i style="color: green;" class="fa fa-golf-ball me-2"></i>Payra Golf & Country Club</h1>
+                <h1 class="m-0 text-dark"><i style="color: green;" class="fa fa-golf-ball me-2"></i>Payra Golf & Country
+                    Club</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -99,7 +100,7 @@
                 <div class="navbar-nav ms-auto py-3" style="padding-left: 40px;" id="nav-div">
                     <a href="/" class="nav-item nav-link">HOME</a>
                     <a href="/aboutpgcc" class="nav-item nav-link">ABOUT US</a>
-                    
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">MANAGEMENT</a>
                         <div class="dropdown-menu m-0">
@@ -266,6 +267,7 @@
 
 
     <!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -283,11 +285,7 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 
-    <script>
-        $(document).ready(function () {
-            $('#datatable').DataTable();
-        });
-    </script>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -301,6 +299,20 @@
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
+    
+    <!-- <script>
+        $(document).ready(function () {
+            $('#datatable').DataTable({
+                scrollX: true,
+            });
+        });
+    </script> -->
+    <script>
+        $('#datatable').DataTable({
+                scrollX: true,
+            });
+    </script>
+   
 </body>
 
 </html>
