@@ -8,31 +8,30 @@ Payra Golf Club
 
 {% block content%}
 <div class="container one card-elm" style="margin: auto; width: 80vw;">
-    <h1 style="margin-top: 20px;">NOTICE BOARD</h1>
+    <h1 style="margin-top: 20px;">SWIMMINGPOOL SCHEDULE</h1>
     <table class="table table-striped cell-border table-sm" id="datatable" style="width: 100%;">
         <thead>
             <tr style="background-color: #091E3E; color: whitesmoke;">
 
                 <th>Ser</th>
-                <th>Date</th>
-                <th>Notice Name</th>
-                <th>Click</th>
+                <th>Event</th>
+                <th>Days</th>
+                <th>Mixed</th>
+                <th>Female</th>
+                <th>Mixed</th>
 
             </tr>
         </thead>
         <tbody style="color: black;">
-            {% for x in noticeList %}
-            {% set pdf_link = x["Link"]%}
+            {% for x in myList %}
+          
             <tr>
                 <td>{{ loop.index }} </td>
-                <td>{{ x["Date"] }}</td>
-                <td>{{ x["Name"] }}</td>
-                <td>
-                    <p><a href="{{pdf_link }}" target="_blank">View Notice 
-                        <i class='fas fa-file-pdf' style='font-size:24px; color: red;'></i>
-                    </a></p>
-                </td>
-
+                <td>{{ x["Event"] }}</td>
+                <td>{{ x["Days"] }}</td>
+                <td>{{ x["Mixed"] }}</td>
+                <td>{{ x["Female"] }}</td>
+                <td>{{ x["Mixed"] }}</td>
             </tr>
             {% endfor %}
         </tbody>

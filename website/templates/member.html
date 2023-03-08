@@ -8,16 +8,14 @@ Payra Golf Club
 
 {% block content%}
 <div class="container one card-elm" style="margin: auto; width: 80vw;">
-    <h1 style="margin-top: 20px;">MEMBER OF PGC</h1>
-    <table class="table table-bordered cell-border table-sm" id="datatable">
+    <h1 style="margin-top: 20px;">FOUNDER MEMBER OF PGC</h1>
+    <table class="table cell-border table-sm" id="datatable"  style="width: 100%;">
         <thead>
             <tr style="background-color: #091E3E; color: whitesmoke;">
 
                 <th>Ser</th>
-                <th>Rk</th>
                 <th>Name</th>
                 <th>Appt</th>
-                <th>Unit/HQ</th>
 
             </tr>
         </thead>
@@ -25,10 +23,10 @@ Payra Golf Club
             {% for x in memberList %}
             <tr>
                 <td>{{ loop.index }}</td>
-                <td>{{ x["Rk"] }}</td>
+               
                 <td>{{ x["Name"] }}</td>
                 <td>{{ x["Appt"] }}</td>
-                <td>{{ x["Unit/HQ"] }}</td>
+               
             </tr>
             {% endfor %}
         </tbody>

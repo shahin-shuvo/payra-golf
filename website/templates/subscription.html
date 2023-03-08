@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title%}
+Payra Golf Club
+{% endblock %}
+
+
+
+{% block content%}
+<div class="container one card-elm" style="margin: auto; width: 80vw;">
+    <h1 style="margin-top: 20px;">FULL MEMBER SUBSCRIPTION</h1>
+    <table class="table cell-border table-sm" id="datatable"  style="width: 100%;">
+        <thead>
+            <tr style="background-color: #091E3E; color: whitesmoke;">
+
+                <th>Ser</th>
+                <th>Member Type</th>
+                <th>Membership Fee</th>
+                <th>Monthly Fee</th>
+
+            </tr>
+        </thead>
+        <tbody style="color: black;">
+            {% for x in FullMemFee %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ x["Full Member"] }}</td>
+                <td>{{ x["Membership Fee"] }}</td>
+                <td>{{ x["Monthly Subscription"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div style="height: 10px; margin-bottom: 20px;">
+    </div>
+
+    <h1 style="margin-top: 20px;">TEMPORARY MEMBER SUBSCRIPTION</h1>
+    <table class="table cell-border table-sm" id="datatable"  style="width: 100%;">
+        <thead>
+            <tr style="background-color: #091E3E; color: whitesmoke;">
+
+                <th>Ser</th>
+                <th>Member Type</th>
+               
+                <th>Daily Fee</th>
+
+            </tr>
+        </thead>
+        <tbody style="color: black;">
+            {% for x in TmpFee %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ x["Temp Members"] }}</td>
+                <td>{{ x["Daily Subscription"] }}</td>
+              
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div style="height: 10px; margin-bottom: 20px;">
+    </div>
+
+    <h1 style="margin-top: 20px;">CORPORATE MEMBER SUBSCRIPTION</h1>
+    <table class="table cell-border table-sm" id="datatable"  style="width: 100%;">
+        <thead>
+            <tr style="background-color: #091E3E; color: whitesmoke;">
+
+                <th>Ser</th>
+                <th>Member Type</th>
+                <th>Membership Fee</th>
+                <th>Monthly Subscription</th>
+
+            </tr>
+        </thead>
+        <tbody style="color: black;">
+            {% for x in CorpFee %}
+            <tr>
+                
+                    <td>{{ loop.index }}</td>
+                    <td>{{ x["Type of Membership"] }}</td>
+                    <td>{{ x["Membership Fee"] }}</td>
+                    <td>{{ x["Monthly Subscription"] }}</td>
+                
+              
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div style="height: 20px; margin-bottom: 20px;">
+    </div>
+</div>
+
+{% endblock %}
