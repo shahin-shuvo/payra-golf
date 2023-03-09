@@ -107,3 +107,8 @@ def swimming_pool():
 def guest_room():
    
     return render_template("guestroom.html")
+  
+@views.route('/upcoming-event')
+def /upcoming_event():
+   
+    return render_template("/upcoming-event.html")
