@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title%}
+Payra Golf Club
+{% endblock %}
+
+
+
+{% block content%}
+<div class="container one card-elm" style="margin: auto; width: 80vw;">
+    <h1 style="margin-top: 20px;">DRIVING FACILITY</h1>
+    <div class="row">
+        <div class="col-sm-12 " data-wow-delay="0.3s">
+            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Available Driving Range</h5>
+            <h5 class="mb-3"><i class="fa fa-check-circle text-secondary me-3"></i>Adequate Driving Facility</h5>
+        
+            <h5 class="mb-3"><i class="fa fa-check-circle text-dark me-3"></i>Learner golfers will also be allowed to use the main course after prior permission of the Golf Captain</h5>
+           
+        </div>
+    </div>
+
+    <div class="row" style="margin: 10px;">
+        <div class="col-sm-12 col-md-6 col-lg-6 gallery-col" >
+            <img src="{{url_for('static',filename='img/golf_grd_2.JPG')}}" alt="Loading Image" style="height: 300px;width: 400px; border: solid wheat 5px; margin:auto;">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 gallery-col"  style="margin-bottom: 5px;">
+            <img src="{{url_for('static',filename='img/golf_grd.JPG')}}" alt="Loading Image" style="height: 300px;width: 400px; border: solid wheat 5px; margin-bottom: 10px;">
+        </div>
+    </div>
+
+        
+    
+</div>
+
+{% endblock %}

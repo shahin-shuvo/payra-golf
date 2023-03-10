@@ -8,7 +8,7 @@ Payra Golf Club
 
 {% block content%}
 <div class="container one card-elm" style="margin: auto; width: 80vw;">
-    <h1 style="margin-top: 20px;">FOUNDER MEMBER OF PGC</h1>
+    <h1 style="margin-top: 20px;">FOUNDING MEMBER OF PGCC</h1>
     <table class="table cell-border table-sm" id="datatable"  style="width: 100%;">
         <thead>
             <tr style="background-color: #091E3E; color: whitesmoke;">
@@ -23,7 +23,6 @@ Payra Golf Club
             {% for x in memberList %}
             <tr>
                 <td>{{ loop.index }}</td>
-               
                 <td>{{ x["Name"] }}</td>
                 <td>{{ x["Appt"] }}</td>
                
@@ -32,7 +31,15 @@ Payra Golf Club
         </tbody>
     </table>
 
-    <div style="height: 20px; margin-bottom: 20px;">
+    <div style="height: 5px; margin-bottom: 5px;">
+    </div>
+    <div class="row" style="margin: 10px;">
+        <div class="col-sm-12 col-md-6 col-lg-6 gallery-col" >
+            <img src="{{url_for('static',filename='img/shoptok.JPG')}}" alt="Loading Image" style="height: 300px;width: 400px; border: solid wheat 5px; margin:auto;">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 gallery-col"  style="margin-bottom: 5px;">
+            <img src="{{url_for('static',filename='img/golf_grd.JPG')}}" alt="Loading Image" style="height: 300px;width: 400px; border: solid wheat 5px; margin-bottom: 10px;">
+        </div>
     </div>
 </div>
 

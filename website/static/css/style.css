@@ -21,7 +21,7 @@ body {
 
 .navbar-brand .text-brand {
     font-family: 'Rubik Dirt';
-    font-size: larger;
+    font-size: 1.5vw;
     color: green;
 }
 
@@ -104,7 +104,7 @@ body {
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Jost', sans-serif;
     padding: 10px 10px;
-    font-size: 14px;
+    font-size: 1.2vw;
     color: var(--dark);
     outline: none;
     white-space: nowrap;
@@ -470,7 +470,7 @@ body {
 
 /* Gallery */
 .gallery-col:hover img {
-    transform: scale(1.6)rotate(2deg);
+    transform: scale(1.4)rotate(1deg);
     /* box-shadow: 0 0 5px 5px olive; */
 }
 
@@ -505,6 +505,18 @@ body {
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.2);
 } 
-.sticky-div{
-   
-}
+
+.all-logo {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .home-committee{
+    background-image: url("../img/golf_grd.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }

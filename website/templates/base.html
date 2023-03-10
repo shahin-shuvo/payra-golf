@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ url_for('static',filename='img/logo.png') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -76,7 +76,7 @@
                 <div
                     class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
                     <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>7infdiv@gmail.com</p>
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>pgcc.7div@gmail.com</p>
                     </div>
                     <div class="py-2">
                         <p class="m-0"><i class="fa fa-phone-alt me-2"></i>01769-072138</p>
@@ -135,15 +135,16 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">MEMBERSHIP</a>
                         <div class="dropdown-menu m-0">
-                            <a href="/membership" class="dropdown-item">Founder Member</a>
+                            <a href="/membership" class="dropdown-item">Founding Member</a>
                             <a href="/subscription" class="dropdown-item">Subscription Fee</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">FACILITY</a>
                         <div class="dropdown-menu m-0">
-                            <a href="/swimming-pool" class="dropdown-item">Swimming Pool</a>
                             <a href="/guest-room" class="dropdown-item">Guest Room</a>
+                            <a href="/golf-driving" class="dropdown-item">Golf Driving</a>
+                            <a href="/caddies" class="dropdown-item">Caddies</a>
                         </div>
                     </div>
                     <a href="/gallery" class="nav-item nav-link">GALLERY</a>
@@ -235,8 +236,8 @@
                     <h3 class="text-white mb-4">Get In Touch</h3>
                     <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Sheikh Hasina Cantonment, Barishal
                     </p>
-                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
-                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>01769-072138</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>pgcc.7div@gmail.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+88 01769-072090</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Follow Us</h3>
@@ -269,7 +270,7 @@
                         Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-white border-bottom" href="">Capt Shahin</a></p>
+                    <p class="mb-0">Developed by <a class="text-white border-bottom" href="">Capt Shahin</a></p>
                 </div>
             </div>
         </div>
@@ -317,7 +318,13 @@
         $('#datatable').DataTable({
             scrollX: true,
         });
+        $('#datatable2').DataTable({
+            scrollX: true,
+        });
 
+        $('#datatable3').DataTable({
+            scrollX: true,
+        });
         $('.navbar-nav>a').on('click', function () {
             $('.navbar-collapse').collapse('hide');
         });

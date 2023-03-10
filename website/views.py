@@ -99,16 +99,28 @@ def swimming_pool():
     gid = "0"
     df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}")
     records = df.to_dict(orient="records")
-    print(records)
+   
     return render_template("swimmingpool.html", myList = records)
 
 
 @views.route('/guest-room')
 def guest_room():
+    sheet_id = "1BrbDXdeZTQqZOJ9NdiR_FFoyIxN2VbpxOGImm-N-tW8"
+    gid = "1668208811"
+    df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}")
+    records = df.to_dict(orient="records")
+  
+    return render_template("guestroom.html", room_img = records)
    
-    return render_template("guestroom.html")
   
 @views.route('/upcoming-event')
 def upcoming_event():
-   
     return render_template("/upcoming-event.html")
+
+@views.route('/golf-driving')
+def golf_driving():
+    return render_template("/golf-driving.html")
+
+@views.route('/caddies')
+def caddies():
+    return render_template("/caddies.html")
