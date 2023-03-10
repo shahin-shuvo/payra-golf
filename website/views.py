@@ -109,7 +109,7 @@ def guest_room():
     gid = "1668208811"
     df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}")
     records = df.to_dict(orient="records")
-  
+   
     return render_template("guestroom.html", room_img = records)
    
   
