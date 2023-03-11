@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title%}
+Payra Golf Club
+{% endblock %}
+
+
+{% block content%}
+<div class="tournament-div container-fluid py-5">
+<div class="container one card-elm" style="margin: auto; width: 80vw; ">
+    <h1 style="margin-top: 20px;">TOURNAMENT RESULT</h1>
+    <table class="table cell-border table-sm" id="datatable"  style="width: 100%;">
+        <thead>
+            <tr style="background-color: #091E3E; color: whitesmoke;" >
+
+                <th>Ser</th>
+                <th>Prize</th>
+                <th>Player</th>
+                <th>Gross</th>
+                <th>Net</th>
+                <th>Rmk</th>
+               
+
+            </tr>
+        </thead>
+        <tbody style="color: black;">
+            {% for x in myList %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ x["Prize"] }}</td>
+                <td>{{ x["Player"] }}</td>
+                <td>{{ x["Gross"] }}</td>
+                <td>{{ x["Net"] }}</td>
+                <td>{{ x["Rmk"] }}</td>
+               
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div style="height: 20px; margin-bottom: 20px;">
+    </div>
+</div>
+</div>
+{% endblock %}

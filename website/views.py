@@ -93,14 +93,14 @@ def tournament_summary():
     return render_template("tournament_summary.html", myList = records)
 
 
-@views.route('/swimming-pool')
-def swimming_pool():
-    sheet_id = "1C2hsqahx6XboezkkZPraI4JjCe45c2kLtJ9fMBN5yMk"
-    gid = "0"
+@views.route('/result')
+def result():
+    sheet_id = "1PqVRcyl5Pp7RGXL-YbYOGwupG5jQEQACRokSjIl8dyw"
+    gid = "20053265"
     df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}")
     records = df.to_dict(orient="records")
    
-    return render_template("swimmingpool.html", myList = records)
+    return render_template("result.html", myList = records)
 
 
 @views.route('/guest-room')

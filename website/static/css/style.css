@@ -353,11 +353,12 @@ body {
 }
 
 .card-circle img {
-    width: 40%;
+   
     border-radius: 50%;
     margin: 0 auto;
     transform: scale(1.2)rotate(0deg);
     border: rgba(0, 0, 0.15, 0.36) solid 5px;
+    width: 40%;
 }
 
 
@@ -520,3 +521,17 @@ body {
     background-size: cover;
     
   }
+
+.bi-arrow-right-circle-fill{
+    margin-left: 2px;
+    margin-right: 2px;
+    color: green;
+}
+.bi-flag-fill{
+    margin-right: 10px;
+    color: #b80000;
+}
+
+.bus-link a{
+    color: #000;
+}
