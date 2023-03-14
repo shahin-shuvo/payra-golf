@@ -149,11 +149,11 @@ Payra Golf Club
         style="margin: auto; width: 85vw; margin-bottom: 10px; background-color: transparent;border: 5px solid wheat;">
         <h1 style="margin-top: 20px;">EXECUTIVE COMMITTEE</h1>
 
-        <div class="container row" style="margin: auto;">
+        <div class="row" style="margin: auto;">
             {% for x in myList %}
             {% set photolink = x["Photo"] %}
-            <div class="col-sm-12 col-md-4 col-lg-3 d-flex align-items-stretch">
-                <div class="card-circle card" style="background-color: transparent; ">
+            <div class="col col-sm-12 col-md-4 col-lg-3 d-flex align-items-stretch">
+                <div class="card-circle card  w-100" style="background-color: transparent; ">
                     <div class="card-icon">
                         {% if photolink is not string %}
 
@@ -162,7 +162,7 @@ Payra Golf Club
                         <img src="{{photolink}}" class="card-img-top" alt="">
                         {% endif %}
                     </div>
-                    <div class="card-body " style="background-color: white;">
+                    <div class="card-body" style="background-color: white;">
                         <h6 class="card-title" style="font-family: 'Jost', sans-serif; font-size: 1rem;">{{ x["Appt"] }}</h6>
                         <p class="card-text" style="font-size: small;">{{ x["Name"] }}</p>
                         <div class="social-icon">
