@@ -6,7 +6,7 @@ Payra Golf Club
 
 
 {% block content%}
-<div class="container-fluid one" style="margin: auto; margin-bottom: 10px; margin-top: 30PX;">
+<div class="container one" style="margin: auto; margin-bottom: 10px; margin-top: 30PX;">
    
     <h1 style="font-size:xx-large; color: #D68910;">PAYRA GALLERY</h1>
     <h6 style="text-align: center;margin-bottom: 20px;">MEET OUR MEMORIES</h6>
@@ -14,7 +14,9 @@ Payra Golf Club
         {% for x in gallery_img%}
             {% set photo_link = x["Photo Link"] %}
         <div class="col-sm-12 col-md-2 col-lg-4 gallery-col"  style="margin-bottom: 20px;">
-            <img src="{{photo_link}}" alt="Loading Image" style="height: 300px;width: 400px; border: solid wheat 5px; margin-bottom: 10px;">
+            <img src="{{photo_link}}" alt="Loading Image" 
+            style="margin: auto; display: block;
+            height: 250px;width: 350px; border: solid wheat 5px; margin-bottom: 10px;">
         </div>
 
         {% endfor %}

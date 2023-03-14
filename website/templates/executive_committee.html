@@ -26,8 +26,8 @@ Payra Golf Club
                 
                 {% set photolink = item["Photo"] %}
                
-                <div class="col-sm-12 col-md-4 col-lg-3" >
-                    <div class="card">
+                <div class="col-sm-12 col-md-4 col-lg-3 d-flex align-items-stretch" >
+                    <div class="card exec_committee">
                         {% if photolink is not string %}
                         
                         <img src="{{url_for('static',filename='img/error-person.png')}}" class="card-img-top" alt="">
