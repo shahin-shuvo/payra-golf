@@ -576,6 +576,6 @@ body {
     color: #b80000;
 }
 
-.bus-link a{
+.bus-link:hover{
     color: #000;
 }
