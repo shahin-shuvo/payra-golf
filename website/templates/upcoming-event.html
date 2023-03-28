@@ -10,8 +10,30 @@ Payra Golf Club
 <div class="container one card-elm" style="margin: auto; width: 80vw;">
     <h1 style="margin-top: 20px;">UPCOMING EVENT</h1>
     
-    <h3 style="margin-top: 5px;">CURRENTLY THERE IS NO UPCOMING EVENT</h3>
-    <h3 style="margin-top: 5px;">UPDATE IS COMING SOON</h3>
+    <table class="table table-striped cell-border table-sm" id="datatable" style="width: 100%;">
+        <thead>
+            <tr style="background-color: #091E3E; color: whitesmoke;">
+
+                <th>Ser</th>
+                <th>Date</th>
+                <th>Event Name</th>
+                <th>Rmk</th>
+
+            </tr>
+        </thead>
+        <tbody style="color: black;">
+            {% for x in records %}
+           
+            <tr>
+                <td>{{ loop.index }} </td>
+                <td>{{ x["Date"] }}</td>
+                <td>{{ x["Event"] }}</td>
+                <td>{{ x["Rmk"] }}</td>
+              
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
    
     <div style="height: 20px; margin-bottom: 20px;">
     </div>

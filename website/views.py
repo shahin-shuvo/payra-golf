@@ -95,12 +95,21 @@ def tournament_summary():
 
 @views.route('/result')
 def result():
+
+    sheet_id = "1PqVRcyl5Pp7RGXL-YbYOGwupG5jQEQACRokSjIl8dyw"
+    sheet_name = "Sheet1"
+    df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv")
+    records = df.to_dict(orient="records")
+    last_item = ""
+    for x in records:
+        last_item = x["Name of Tournament"]
+    print(last_item)
     sheet_id = "1PqVRcyl5Pp7RGXL-YbYOGwupG5jQEQACRokSjIl8dyw"
     gid = "20053265"
     df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}")
     records = df.to_dict(orient="records")
    
-    return render_template("result.html", myList = records)
+    return render_template("result.html", myList = records, t_name = last_item)
 
 
 @views.route('/guest-room')
@@ -115,7 +124,12 @@ def guest_room():
   
 @views.route('/upcoming-event')
 def upcoming_event():
-    return render_template("/upcoming-event.html")
+    sheet_id = "1AQY2AjiYRo6R3LOkEj5Imp1CEeyDAMZT5Kovv_OQKKM"
+    gid = "1115812265"
+    df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}")
+    records = df.to_dict(orient="records")
+    
+    return render_template("/upcoming-event.html", records= records)
 
 @views.route('/golf-driving')
 def golf_driving():
