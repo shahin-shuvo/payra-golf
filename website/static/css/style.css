@@ -253,7 +253,7 @@ body {
 }
 
 .carousel-img {
-    height: 70vh;
+    height: 65vh;
     transition: background-image 1s ease-in-out;
 }
 
